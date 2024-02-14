@@ -4,13 +4,25 @@ public class Calculator {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Enter the first whole number: ");
+        System.out.println("Enter the first whole number:");
         int num1 = scanner.nextInt();
-        System.out.print("Enter the second whole number: ");
+
+        System.out.println("Enter the second whole number:");
         int num2 = scanner.nextInt();
 
-        int sum = num1 + num2;
-        System.out.println("The sum is: " + sum);
+        System.out.println("Choose an operation (+ or -):");
+        char operation = scanner.next().charAt(0);
+
+        switch (operation) {
+            case '+':
+                System.out.println("The sum is: " + (num1 + num2));
+                break;
+            case '-':
+                System.out.println("The difference is: " + (num1 - num2));
+                break;
+            default:
+                System.out.println("Invalid operation.");
+        }
 
         scanner.close();
     }

@@ -10,7 +10,7 @@ public class Calculator {
         System.out.println("Enter the second whole number:");
         int num2 = scanner.nextInt();
 
-        System.out.println("Choose an operation (+ or -):");
+        System.out.println("Choose an operation (+, -, *, /):");
         char operation = scanner.next().charAt(0);
 
         switch (operation) {
@@ -20,6 +20,16 @@ public class Calculator {
             case '-':
                 System.out.println("The difference is: " + (num1 - num2));
                 break;
+            case '*':
+                System.out.println("The product is: " + (num1 * num2));
+                break;
+            case '/':
+                if (num2 == 0) {
+                    System.out.println("Error: Divide by Zero");
+                } else {
+                    System.out.println("The quotient is: " + (num1 / num2));
+                }
+                break;
             default:
                 System.out.println("Invalid operation.");
         }
@@ -27,3 +37,4 @@ public class Calculator {
         scanner.close();
     }
 }
+

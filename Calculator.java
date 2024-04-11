@@ -9,7 +9,7 @@ public static void main(String[] args) {
     System.out.println("Enter the second whole numnber: ");
     int num2 = scanner.nextInt();
 
-    System.out.println("Choose an operation (+ or -):");
+    System.out.println("Choose an operation (+, -, *, /):");
     char operation = scanner.next().charAt(0);
 
     switch (operation) {
@@ -19,7 +19,17 @@ public static void main(String[] args) {
         case '-':
         System.out.println("The diffrence is: " + (num1 - num2));
         break;
-        default:
+        case '*':
+        System.out.println("The diffrence is: " + (num1 * num2));
+        break;
+        case '/':
+        if (num2 == 0) {
+            System.out.println("Error: Divide by Zero");
+        } else {
+            System.out.println("The quotient is: " +  (num1 / num2));
+        }
+        break;
+    default:
         System.out.println("Invalid operation.");
     }
     scanner.close();

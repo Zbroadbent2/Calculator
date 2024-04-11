@@ -9,9 +9,19 @@ public static void main(String[] args) {
     System.out.println("Enter the second whole numnber: ");
     int num2 = scanner.nextInt();
 
-    int sum = num1 + num2;
-    System.out.println("The sum is: " + sum);
+    System.out.println("Choose an operation (+ or -):");
+    char operation = scanner.next().charAt(0);
 
+    switch (operation) {
+        case '+':
+        System.out.println("The sum is: " + (num1 + num2));
+        break;
+        case '-':
+        System.out.println("The diffrence is: " + (num1 - num2));
+        break;
+        default:
+        System.out.println("Invalid operation.");
+    }
     scanner.close();
     }
 }
